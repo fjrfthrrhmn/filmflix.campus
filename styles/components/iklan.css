@@ -1,0 +1,22 @@
+.iklan__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.iklan__card {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 70%;
+  transition: all 300ms ease-in-out;
+}
+
+.iklan__card:hover {
+  opacity: 90%;
+}

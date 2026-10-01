@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FilmFlix</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/components/badge.css" />
+    <link rel="stylesheet" href="../styles/components/button.css" />
+    <link rel="stylesheet" href="../styles/components/hero.css" />
+    <link rel="stylesheet" href="../styles/components/navbar.css" />
+    <link rel="stylesheet" href="../styles/components/movies.css" />
+    <link rel="stylesheet" href="../styles/components/history.css" />
+    <link rel="stylesheet" href="../styles/components/iklan.css" />
+    <link rel="stylesheet" href="../styles/components/login.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="navbar__logo">
+        <span>Flix</span>
+      </div>
+
+      <nav class="navbar__menu" aria-label="Main navigation">
+        <a href="#" class="navbar__link --active">
+          <re-icon icon="search-normal" class="navbar__icon"></re-icon>
+          <span class="navbar__label">Search</span>
+        </a>
+
+        <a href="#" class="navbar__link --active">
+          <re-icon icon="home6" class="navbar__icon navbar__active"></re-icon>
+          <span class="navbar__label">Home</span>
+        </a>
+
+        <a href="#" class="navbar__link">
+          <re-icon icon="clapperboard-open" class="navbar__icon"></re-icon>
+          <span class="navbar__label">Movies</span>
+        </a>
+
+        <a href="#" class="navbar__link">
+          <re-icon icon="video-lib" class="navbar__icon"></re-icon>
+          <span class="navbar__label">TV Shows</span>
+        </a>
+
+        <a href="#" class="navbar__link">
+          <re-icon icon="video-play-h" class="navbar__icon"></re-icon>
+          <span class="navbar__label">My List</span>
+        </a>
+      </nav>
+
+      <a href="#" class="navbar__link" style="border-radius: 9999px">
+        <re-icon icon="user2" class="navbar__icon"></re-icon>
+        <span class="navbar__label">Profile</span>
+      </a>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="hero"
+        style="
+          background-image: url(&quot;/assets/bg-primary.jpg&quot;);
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content">
+          <div class="hero__meta">
+            <span class="badge badge--purple"> ANIME </span>
+
+            <span class="badge badge--success"> 2016 </span>
+
+            <span class="badge badge--info"> PG-13 </span>
+
+            <span class="badge badge--outline"> 1h 46m </span>
+          </div>
+
+          <h1 class="hero__title">Your Name.<br /></h1>
+
+          <p class="hero__description">
+            Two teenagers, a city boy in Tokyo and a girl in rural Japan,
+            mysteriously begin swapping bodies, forging a connection that sends
+            them searching for one another.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#" class="button button--primary">
+              <re-icon icon="play" style="font-size: 18px"></re-icon>
+              Play
+            </a>
+
+            <a href="#" class="button button--secondary">
+              <re-icon icon="info-square" style="font-size: 18px"></re-icon>
+              More Info
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__navigation" aria-label="Hero slides">
+          <button
+            class="hero__dot hero__dot--active"
+            type="button"
+            data-slide="0"
+            aria-label="Go to slide 1"
+            aria-current="true"
+          ></button>
+
+          <button
+            class="hero__dot"
+            type="button"
+            data-slide="1"
+            aria-label="Go to slide 2"
+          ></button>
+
+          <button
+            class="hero__dot"
+            type="button"
+            data-slide="2"
+            aria-label="Go to slide 3"
+          ></button>
+        </div>
+      </section>
+
+      <!-- Movies Section -->
+      <section class="container" aria-labelledby="trending-title">
+        <!-- Section Header -->
+        <div class="movies__header">
+          <div class="movies__heading">
+            <re-icon icon="fire" class="movies__icon"></re-icon>
+
+            <div>
+              <span class="movies__eyebrow">EXPLORE</span>
+              <h2 id="trending-title" class="movies__title">Trending Now</h2>
+            </div>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              gap: 4px;
+              align-items: center;
+            "
+          >
+            <button class="button--outline" style="width: 32px; height: 32px">
+              <re-icon icon="angle-left" class="icon"></re-icon>
+            </button>
+            <button class="button--outline" style="width: 32px; height: 32px">
+              <re-icon icon="angle-right" class="icon"></re-icon>
+            </button>
+          </div>
+        </div>
+
+        <!-- Movie Grid -->
+        <div class="movies__grid">
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 2.jpg"
+                  alt="Your Name."
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 3.jpg"
+                  alt="Spirited Away"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 4.jpg"
+                  alt="Weathering With You"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 5.jpg"
+                  alt="Demon Slayer"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 6.jpg"
+                  alt="A Silent Voice"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 7.jpg"
+                  alt="Howl's Moving Castle"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 8.jpg"
+                  alt="Jujutsu Kaisen"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 1.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 9.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 10.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 11.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 12.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 13.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 14.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 15.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="movie-card">
+            <a href="#" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img
+                  src="../assets/poster/film 16.jpg"
+                  alt="Attack on Titan"
+                  loading="lazy"
+                />
+
+                <div class="movie-card__overlay">
+                  <span class="movie-card__play">
+                    <re-icon icon="play"></re-icon>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Iklan Section -->
+      <section class="container">
+        <!-- Grid 3 -->
+        <div class="iklan__grid">
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/iklan/iklan 1.jpg" alt="" class="iklan__card" />
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/iklan/iklan 2.jpg" alt="" class="iklan__card" />
+          </a>
+        </div>
+      </section>
+
+      <!-- History Section -->
+      <section class="container history" aria-labelledby="history-title">
+        <!-- Section Header -->
+        <div class="movies__header">
+          <div class="movies__heading">
+            <re-icon
+              icon="reel"
+              class="movies__icon"
+              style="color: var(--text-primary)"
+            ></re-icon>
+
+            <div>
+              <span class="movies__eyebrow">YOUR HISTORY</span>
+              <h2 id="history-title" class="movies__title">
+                Continue Watching
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- History Grid -->
+        <div class="history__grid">
+          <!-- History Card -->
+          <article class="history-card">
+            <div class="history-card__video">
+              <iframe
+                src="https://www.youtube.com/embed/6Re4lG7kG2s"
+                title="Your Name. Trailer"
+                loading="lazy"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="history-card__content">
+              <h3 class="history-card__title">Your Name.</h3>
+
+              <p class="history-card__description">
+                Two teenagers mysteriously begin swapping bodies and search for
+                one another across time and distance.
+              </p>
+
+              <div class="history-card__footer">
+                <span class="history-card__progress">
+                  <span style="width: 68%"></span>
+                </span>
+
+                <span class="history-card__time">68%</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- History Card -->
+          <article class="history-card">
+            <div class="history-card__video">
+              <iframe
+                src="https://www.youtube.com/embed/ByXuk9QqQkk"
+                title="Spirited Away Trailer"
+                loading="lazy"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="history-card__content">
+              <h3 class="history-card__title">Spirited Away</h3>
+
+              <p class="history-card__description">
+                A young girl enters a mysterious spirit world and must find her
+                way home after her parents are transformed.
+              </p>
+
+              <div class="history-card__footer">
+                <span class="history-card__progress">
+                  <span style="width: 42%"></span>
+                </span>
+
+                <span class="history-card__time">42%</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- History Card -->
+          <article class="history-card">
+            <div class="history-card__video">
+              <iframe
+                src="https://www.youtube.com/embed/r6O7D4x4v7U"
+                title="Weathering With You Trailer"
+                loading="lazy"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="history-card__content">
+              <h3 class="history-card__title">Weathering With You</h3>
+
+              <p class="history-card__description">
+                A runaway teenager meets a mysterious girl who has the
+                extraordinary ability to control the weather.
+              </p>
+
+              <div class="history-card__footer">
+                <span class="history-card__progress">
+                  <span style="width: 24%"></span>
+                </span>
+
+                <span class="history-card__time">24%</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Login Section -->
+      <section class="login__section">
+        <div class="login__overlay"></div>
+        <div class="login__content">
+          <div class="login__form">
+            <div class="login__header">
+              <h2 class="login__title">Login to FilmFlix</h2>
+              <p class="login__description">
+                Sign in to continue watching your favorite movies and shows.
+              </p>
+            </div>
+            <form action="#" method="post">
+              <div class="login__field">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Enter your username"
+                  required
+                />
+              </div>
+              <div class="login__field">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="button button--primary login__submit"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2026 FilmFlix. All rights reserved.</p>
+        <p>Thank you for visiting FilmFlix.</p>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/reicon@latest/cdn/reicon.js"></script>
+  </body>
+</html>

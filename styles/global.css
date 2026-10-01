@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* =========================================================
+   DESIGN TOKENS
+========================================================= */
+
+:root {
+  /* -----------------------------------------------------
+       COLOR — Base
+    ----------------------------------------------------- */
+
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.269 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+
+  --accent: oklch(0.371 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(0.275 0 0);
+  --input: oklch(0.325 0 0);
+  --ring: oklch(0.556 0 0);
+
+  /* -----------------------------------------------------
+       COLOR — Brand
+    ----------------------------------------------------- */
+
+  --brand: #e50914;
+  --brand-hover: #f40612;
+  --brand-foreground: #ffffff;
+
+  /* -----------------------------------------------------
+       COLOR — Text
+    ----------------------------------------------------- */
+
+  --text-primary: rgb(255 255 255 / 1);
+  --text-secondary: rgb(255 255 255 / 0.85);
+  --text-muted: rgb(255 255 255 / 0.4);
+  --text-disabled: rgb(255 255 255 / 0.4);
+
+  /* -----------------------------------------------------
+       COLOR — Surface
+    ----------------------------------------------------- */
+
+  --surface-primary: rgb(0 0 0 / 0.95);
+  --surface-secondary: rgb(0 0 0 / 0.75);
+  --surface-tertiary: rgb(0 0 0 / 0.65);
+
+  --surface-hover: rgb(255 255 255 / 0.1);
+  --surface-active: rgb(255 255 255 / 0.15);
+
+  /* -----------------------------------------------------
+       COLOR — Overlay
+    ----------------------------------------------------- */
+
+  --overlay-heavy: rgb(0 0 0 / 0.95);
+  --overlay-medium: rgb(0 0 0 / 0.75);
+  --overlay-light: rgb(0 0 0 / 0.25);
+  --overlay-subtle: rgb(0 0 0 / 0.05);
+
+  /* -----------------------------------------------------
+       COLOR — Button
+    ----------------------------------------------------- */
+
+  --button-primary-bg: var(--primary);
+  --button-primary-fg: var(--primary-foreground);
+  --button-primary-hover: var(--foreground);
+
+  --button-secondary-bg: rgb(109 109 110 / 0.5);
+  --button-secondary-fg: var(--text-primary);
+  --button-secondary-hover: rgb(109 109 110 / 0.9);
+
+  /* -----------------------------------------------------
+       TYPOGRAPHY
+    ----------------------------------------------------- */
+
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Ubuntu", sans-serif;
+
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+
+  /* -----------------------------------------------------
+       FONT SIZE
+    ----------------------------------------------------- */
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  /* -----------------------------------------------------
+       FONT WEIGHT
+    ----------------------------------------------------- */
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* -----------------------------------------------------
+       SPACING
+    ----------------------------------------------------- */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* -----------------------------------------------------
+       RADIUS
+    ----------------------------------------------------- */
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* -----------------------------------------------------
+       BORDER
+    ----------------------------------------------------- */
+
+  --border-width: 1px;
+
+  /* -----------------------------------------------------
+       SHADOW
+    ----------------------------------------------------- */
+
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px rgb(0 0 0 / 0.1);
+
+  --shadow: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px rgb(0 0 0 / 0.1);
+
+  --shadow-md: 0 4px 6px rgb(0 0 0 / 0.1);
+
+  --shadow-lg: 0 10px 30px rgb(0 0 0 / 0.35);
+
+  /* -----------------------------------------------------
+       MOTION
+    ----------------------------------------------------- */
+
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+
+  --ease-default: ease;
+  --ease-out: ease-out;
+
+  /* -----------------------------------------------------
+       Z-INDEX
+    ----------------------------------------------------- */
+
+  --z-base: 1;
+  --z-content: 2;
+  --z-navbar: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+
+  /* -----------------------------------------------------
+   COLOR — Badge
+----------------------------------------------------- */
+
+  --badge-brand-bg: var(--brand);
+  --badge-brand-fg: var(--brand-foreground);
+
+  --badge-success-bg: rgb(34 197 94 / 0.15);
+  --badge-success-fg: rgb(134 239 172 / 1);
+  --badge-success-border: rgb(34 197 94 / 0.3);
+
+  --badge-warning-bg: rgb(234 179 8 / 0.15);
+  --badge-warning-fg: rgb(253 224 71 / 1);
+  --badge-warning-border: rgb(234 179 8 / 0.3);
+
+  --badge-danger-bg: rgb(239 68 68 / 0.15);
+  --badge-danger-fg: rgb(252 165 165 / 1);
+  --badge-danger-border: rgb(239 68 68 / 0.3);
+
+  --badge-info-bg: rgb(59 130 246 / 0.15);
+  --badge-info-fg: rgb(147 197 253 / 1);
+  --badge-info-border: rgb(59 130 246 / 0.3);
+
+  --badge-purple-bg: rgb(168 85 247 / 0.15);
+  --badge-purple-fg: rgb(216 180 254 / 1);
+  --badge-purple-border: rgb(168 85 247 / 0.3);
+
+  --badge-pink-bg: rgb(236 72 153 / 0.15);
+  --badge-pink-fg: rgb(249 168 212 / 1);
+  --badge-pink-border: rgb(236 72 153 / 0.3);
+
+  --badge-cyan-bg: rgb(6 182 212 / 0.15);
+  --badge-cyan-fg: rgb(103 232 249 / 1);
+  --badge-cyan-border: rgb(6 182 212 / 0.3);
+
+  --badge-neutral-bg: var(--surface-tertiary);
+  --badge-neutral-fg: var(--text-secondary);
+  --badge-neutral-border: var(--border);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  color: var(--foreground);
+  background: var(--background);
+
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  color: var(--background);
+  background: var(--foreground);
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: min(100% - 160px, 1400px);
+    margin-left: 80px;
+    padding: var(--space-8) var(--space-8);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
